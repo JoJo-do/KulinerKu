@@ -1,264 +1,103 @@
-# \# KulinerKu
+# KulinerKu
 
-# 
+**Resep Nusantara, Mudah di Rumah**
 
-# \*\*Resep Nusantara, Mudah di Rumah\*\*
+KulinerKu adalah aplikasi mobile berbasis Flutter untuk membantu pengguna menemukan inspirasi masakan Nusantara. Aplikasi menyediakan katalog resep, pencarian, filter kategori, serta detail resep yang berisi bahan dan langkah memasak.
 
-# 
+Proyek ini dikembangkan untuk memenuhi tugas UTS mata kuliah Mobile Programming.
 
-# \## Deskripsi
+## Fitur Utama
 
-# 
+- **Beranda:** Menampilkan kategori dan resep pilihan.
+- **Katalog Resep:** Menampilkan koleksi resep masakan.
+- **Pencarian:** Mencari resep berdasarkan nama masakan.
+- **Filter Kategori:** Menyaring resep berdasarkan kategori.
+- **Detail Resep:** Menampilkan foto, deskripsi, waktu memasak, jumlah porsi, bahan, dan langkah memasak.
+- **Navigasi:** Memudahkan perpindahan antarhalaman.
 
-# KulinerKu adalah aplikasi mobile berbasis Flutter yang dirancang untuk membantu pengguna menemukan inspirasi masakan Nusantara. Aplikasi ini menyediakan katalog resep, pencarian berdasarkan nama masakan, filter kategori, serta detail resep yang mencakup bahan dan langkah-langkah memasak.
+## Daftar Resep
 
-# 
+| Nama Resep | Kategori |
+|---|---|
+| Nasi Goreng Kampung | Makanan Utama |
+| Soto Ayam | Sup |
+| Pisang Goreng | Camilan |
 
-# Aplikasi ini dikembangkan sebagai bagian dari tugas Ujian Tengah Semester (UTS) mata kuliah Mobile Programming.
+Data resep pada versi ini disimpan secara lokal sebagai data dummy. Aplikasi belum memerlukan backend atau API eksternal.
 
-# 
+## Teknologi
 
-# \## Fitur Aplikasi
+- Flutter
+- Dart
+- Material Design
+- Git dan GitHub
 
-# 
+## Struktur Proyek
 
-# \- \*\*Beranda:\*\* Menampilkan pengenalan aplikasi, kategori masakan, dan resep pilihan.
+```text
+lib/
+├── data/
+│   └── recipe_data.dart
+├── models/
+│   └── recipe.dart
+├── pages/
+│   ├── home_page.dart
+│   ├── recipe_list_page.dart
+│   └── recipe_detail_page.dart
+└── main.dart
 
-# \- \*\*Katalog Resep:\*\* Menampilkan daftar resep yang tersedia.
+assets/
+└── images/
+```
 
-# \- \*\*Pencarian Resep:\*\* Memungkinkan pengguna mencari resep berdasarkan nama masakan.
+## Cara Menjalankan
 
-# \- \*\*Filter Kategori:\*\* Memungkinkan pengguna menyaring resep berdasarkan kategori.
+Pastikan Flutter SDK dan perangkat Android atau emulator sudah tersedia.
 
-# \- \*\*Detail Resep:\*\* Menampilkan foto, deskripsi, durasi memasak, jumlah porsi, bahan-bahan, dan langkah-langkah memasak.
+1. Clone repositori:
 
-# \- \*\*Navigasi:\*\* Memudahkan pengguna berpindah antarhalaman aplikasi.
+   ```bash
+   git clone https://github.com/JoJo-do/KulinerKu.git
+   ```
 
-# 
+2. Masuk ke folder proyek:
 
-# \## Daftar Resep
+   ```bash
+   cd KulinerKu
+   ```
 
-# 
+3. Unduh dependensi:
 
-# Resep yang tersedia pada versi saat ini:
+   ```bash
+   flutter pub get
+   ```
 
-# 
+4. Jalankan aplikasi:
 
-# 1\. Nasi Goreng Kampung
+   ```bash
+   flutter run
+   ```
 
-# 2\. Soto Ayam
+## Pengujian
 
-# 3\. Pisang Goreng
+| Pengujian | Hasil |
+|---|---|
+| Pencarian resep | Lulus |
+| Filter kategori | Lulus |
+| Detail resep | Lulus |
+| Navigasi kembali | Lulus |
+| Kondisi tanpa hasil | Lulus |
+| `flutter analyze` | Lulus |
+| Build APK | Berhasil |
 
-# 
+## Rencana Pengembangan
 
-# Data resep menggunakan data dummy lokal dan belum memerlukan backend maupun API eksternal.
+Pengembangan selanjutnya dapat mencakup penambahan resep, fitur favorit, integrasi API atau database, serta peningkatan aksesibilitas dan responsivitas antarmuka.
 
-# 
+## Pengembang
 
-# \## Teknologi yang Digunakan
+Dikembangkan sebagai proyek UTS mata kuliah Mobile Programming.
 
-# 
+---
 
-# \- Flutter sebagai framework pengembangan aplikasi.
-
-# \- Dart sebagai bahasa pemrograman.
-
-# \- Material Design sebagai dasar komponen antarmuka.
-
-# \- Git untuk pengelolaan versi.
-
-# \- GitHub untuk penyimpanan source code.
-
-# 
-
-# \## Struktur Proyek
-
-# 
-
-# ```text
-
-# kulinerku/
-
-# ├── assets/
-
-# │   └── images/
-
-# ├── lib/
-
-# │   ├── data/
-
-# │   │   └── recipe\_data.dart
-
-# │   ├── models/
-
-# │   │   └── recipe.dart
-
-# │   ├── pages/
-
-# │   │   ├── home\_page.dart
-
-# │   │   ├── recipe\_list\_page.dart
-
-# │   │   └── recipe\_detail\_page.dart
-
-# │   └── main.dart
-
-# ├── test/
-
-# ├── pubspec.yaml
-
-# └── README.md
-
-# ```
-
-# 
-
-# \## Persyaratan
-
-# 
-
-# Sebelum menjalankan aplikasi, pastikan perangkat telah memiliki:
-
-# 
-
-# \- Flutter SDK.
-
-# \- Dart SDK yang sesuai dengan instalasi Flutter.
-
-# \- Android Studio atau editor kode yang mendukung Flutter.
-
-# \- Emulator Android atau perangkat Android untuk menjalankan aplikasi.
-
-# 
-
-# \## Cara Menjalankan Aplikasi
-
-# 
-
-# 1\. Clone repositori GitHub:
-
-# 
-
-# &#x20;  ```bash
-
-# &#x20;  git clone https://github.com/JoJo-do/KulinerKu.git
-
-# &#x20;  ```
-
-# 
-
-# 2\. Masuk ke direktori proyek:
-
-# 
-
-# &#x20;  ```bash
-
-# &#x20;  cd KulinerKu
-
-# &#x20;  ```
-
-# 
-
-# 3\. Unduh dependensi:
-
-# 
-
-# &#x20;  ```bash
-
-# &#x20;  flutter pub get
-
-# &#x20;  ```
-
-# 
-
-# 4\. Jalankan aplikasi:
-
-# 
-
-# &#x20;  ```bash
-
-# &#x20;  flutter run
-
-# &#x20;  ```
-
-# 
-
-# \## Membuat APK
-
-# 
-
-# Untuk membangun APK release, jalankan:
-
-# 
-
-# ```bash
-
-# flutter build apk --release
-
-# ```
-
-# 
-
-# Apabila proses build berhasil, file APK biasanya tersedia di:
-
-# 
-
-# ```text
-
-# build/app/outputs/flutter-apk/app-release.apk
-
-# ```
-
-# 
-
-# \## Hasil Pengujian
-
-# 
-
-# Pengujian yang telah dilakukan pada aplikasi:
-
-# 
-
-# | No. | Pengujian | Hasil |
-
-# |---|---|---|
-
-# | 1 | Pencarian resep menggunakan kata kunci `soto` | Lulus |
-
-# | 2 | Filter kategori Camilan | Lulus |
-
-# | 3 | Menampilkan foto, bahan, dan langkah memasak pada detail resep | Lulus |
-
-# | 4 | Navigasi kembali ke katalog | Lulus |
-
-# | 5 | Menampilkan pesan ketika resep tidak ditemukan | Lulus |
-
-# | 6 | Pemeriksaan kode menggunakan `flutter analyze` | Lulus |
-
-# | 7 | Build aplikasi Android | Berhasil |
-
-# 
-
-# \## Rencana Pengembangan
-
-# 
-
-# Pengembangan selanjutnya dapat mencakup penambahan koleksi resep, fitur favorit, integrasi API atau database, serta peningkatan aksesibilitas dan responsivitas antarmuka.
-
-# 
-
-# \## Pengembang
-
-# 
-
-# Proyek ini dikembangkan untuk memenuhi tugas UTS mata kuliah Mobile Programming.
-
-# 
-
-# \---
-
-# 
-
-# \*\*KulinerKu — Resep Nusantara, Mudah di Rumah.\*\*
-
+*KulinerKu — Resep Nusantara, Mudah di Rumah.*
